@@ -1,0 +1,37 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Status,Text Area 1,Text Area 2,Comments
+1,Document,,,,,,,,,Draft,Blank diagram,,
+2,Page,,,,,,,,,,Page 1,,
+3,Block,Standard,2,,,,,,,,,,
+4,Terminator,Flowchart Shapes/Containers,2,,,,,,,,XRay Service,,
+5,Document,Flowchart Shapes/Containers,2,,,,,,,,xray access log file,,
+6,Terminator,Flowchart Shapes/Containers,2,,,,,,,,Log Parser,,
+7,Database,Flowchart Shapes/Containers,2,,,,,,,,Banned database,,
+8,Terminator,Flowchart Shapes/Containers,2,,,,,,,,Banned DB Api,,
+9,Terminator,Flowchart Shapes/Containers,2,,,,,,,,Firewall Service,,
+10,Terminator,Flowchart Shapes/Containers,2,,,,,,,,Firewall API,,
+11,Terminator,Flowchart Shapes/Containers,2,,,,,,,,logrotate Service,,
+12,Code block,Standard,2,,,,,,,,"GetIPsToBanFromLogs
+AddIPsToDB
+BanIPsByFirewall
+GetIPsToUnbanFromDB
+UnbanIPsByFirewall
+RemoveUnbannedIPsFromDB
+Sleep(loop timeout)","1
+2
+3
+4
+5
+6
+7
+",
+13,Text,Standard,2,,,,,,,,Banning Service,,
+14,Code block,Standard,2,,,,,,,,Main Banning Loop,,
+15,Line,,2,,,4,5,None,Arrow,,,,
+16,Line,,2,,,5,6,None,Arrow,,,,
+17,Line,,2,,,8,7,None,Arrow,,,,
+18,Line,,2,,,7,8,None,Arrow,,,,
+19,Line,,2,,,10,9,None,Arrow,,,,
+20,Line,,2,,,11,5,None,Arrow,,,,
+21,Line,,2,,,12,6,None,Arrow,,,,
+22,Line,,2,,,12,8,None,Arrow,,,,
+23,Line,,2,,,12,10,None,Arrow,,,,
