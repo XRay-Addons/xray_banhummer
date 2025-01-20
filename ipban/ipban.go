@@ -64,7 +64,7 @@ func (b *IPBanner) runCommand(cmd string) error {
 	head := parts[0]
 	args := parts[1:]
 
-	if b.debugMode {
+	if b.config.DebugMode {
 		return nil // don't ban, just print
 	}
 
