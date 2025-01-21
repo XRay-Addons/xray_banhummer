@@ -36,13 +36,16 @@ func (b *BanningLoop) StartBanningLoop() error {
 	}
 	defer bannedDB.Close()
 
-	for {
-		time.Sleep(b.config.UpdateInterval.TimeDuration())
+	ticker := time.NewTicker(b.config.UpdateInterval.TimeDuration())
+	defer ticker.Stop()
 
+	for range ticker.C {
 		if err = b.banningLoopIteration(*bannedDB); err != nil {
 			log.Printf("banning failed: %s", err)
 		}
 	}
+
+	return nil
 }
 
 func (b *BanningLoop) banningLoopIteration(bannedDB db.BannedDB) error {
